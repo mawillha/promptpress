@@ -1,6 +1,6 @@
 {
   "name": "@ai-utils/promptpress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "licence": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
