@@ -2,7 +2,7 @@
   "name": "@ai-utils/promptpress",
   "author": "themataleao@gmail.com",
   "description": "Lightweight prompt template library for AI models",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "licence": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
