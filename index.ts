@@ -4,10 +4,13 @@ const replaceTemplateVariables = (
   template: string,
   variables: { [key: string]: string }
 ): string => {
-  return Object.keys(variables).reduce((content, key) => {
+  let templateText = template;
+  Object.keys(variables).map((key) => {
     const regex = new RegExp(`{{${key}}}`, "g");
-    return content.replace(regex, variables[key]);
+    console.log(regex);
+    return regex;
   }, template);
+  return templateText;
 };
 
 // Function to load the markdown file and apply variable values
