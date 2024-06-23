@@ -1,4 +1,5 @@
-import * as fs from "fs";
+import fs from "fs";
+import path from "path";
 
 export const sanitizeString = (str: string) => {
   str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim, "");
@@ -19,10 +20,11 @@ export const replaceTemplateVariables = (
 };
 
 export const loadTemplate = (filePath?: string) => {
-  const fileContent = fs.readFileSync(
-    filePath || "src/templates/test.md",
-    "utf8"
+  const filePathInt = path.join(
+    process.cwd(),
+    filePath || "src/templates/test.md"
   );
+  const fileContent = fs.readFileSync(filePathInt, "utf8");
   return fileContent;
 };
 
